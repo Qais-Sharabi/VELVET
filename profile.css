@@ -1,0 +1,178 @@
+/* Profile Modal Styling */
+.profile-card {
+    position: fixed;
+    top: 15px;
+    right: 10px;
+    max-width: 450px;
+    width: 100%;
+    padding: 0 !important;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 15px;
+    background: white;
+    color: black;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    z-index: 1500;
+    animation: slideIn 0.4s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-10px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.profile-header {
+    background-image: linear-gradient(to right,#5200cc,#5c00e6,#751aff, #8533ff,#944dff,#a366ff,#b380ff,#c299ff,#d1b3ff);
+    padding: 20px 20px 40px;
+    color: black;
+    border-bottom: 1px solid black;
+}
+/* Transparent Close Button at Top Right */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    color: black; /* White to show against the purple gradient */
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 2010;
+    transition: opacity 0.2s;
+}
+.close-btn:hover {
+    opacity: 0.7;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Darkened slightly for better focus */
+    backdrop-filter: blur(2px);
+    z-index: 2000; /* Higher than Bootstrap's sticky-nav (1020) and modals (1050) */
+    display: none; /* Controlled by JS */
+    align-items: center;
+    justify-content: center;
+}
+.profile-avatar {
+    width: 70px;
+    height: 70px;
+    background:#d4af37;/* Gold theme */
+    color: #1f004d;
+    font-size: 28px;
+    font-weight: 800;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    border: 1px solid #1f004d;
+}
+
+.member-badge {
+    display: inline-block;
+    background: rgba(230, 230,230, 0.2);
+    color:#1f004d;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.profile-menu {
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 18px 15px;
+    text-decoration: none !important;
+    color: #333 !important;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    text-align: left;
+    gap: 15px;
+    background: #fff;
+    border: 1px solid transparent;
+}
+
+.menu-item:hover {
+    background: #e5ccff;
+    border-color: #eee;
+    transform: translateX(8px);
+}
+
+.menu-item i:first-child {
+    font-size: 20px;
+    width: 30px;
+    color: #1a1a1a;
+}
+
+.menu-item p {
+    margin: 0;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.menu-item span {
+    font-size: 12px;
+    color: #888;
+}
+
+.logout-btn {
+    width: calc(100% - 40px);
+    margin: 0 20px 25px;
+    padding: 14px;
+    border: 1px solid #eee;
+    background: white;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.logout-btn:hover {
+    background: #ffe6ff;
+    color: #990000;
+    border-color: #b30077;
+}
+
+/* Desktop: Pushed to the right */
+@media (min-width: 768px) {
+    #profile-modal.modal-overlay {
+        display: none; /* JS will change this to flex */
+        align-items: flex-start;
+        justify-content: flex-end; /* Pushes card to the right side */
+        padding-top: 50px;
+        padding-right: 20px;
+    }
+    .profile-card {
+        margin-right: 0;
+        margin-left: auto;
+        width: 310px;
+    }
+}
+
+/* Mobile: Centered */
+@media (max-width: 767px) {
+    #profile-modal.modal-overlay {
+        justify-content: center;
+        align-items: center;
+    }
+    .profile-card {
+        width: 90%;
+        margin: auto;
+    }
+}

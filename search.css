@@ -1,0 +1,26 @@
+/* SEARCH Modal Styling */
+.search-input-container {
+    background-color: #fff;
+    border: 1px solid #ddd !important;
+}
+
+.discovery-tag {
+    cursor: pointer;
+    transition: 0.2s ease;
+    background-color: #f8f9fa;
+    font-size: 0.85rem;
+}
+
+.discovery-tag:hover {
+    background-color: #e9ecef;
+}
+
+.modal-content {
+    border-radius: 0; /* Full screen look */
+}
+
+/* Hide scrollbar for clean discovery area */
+.modal-body::-webkit-scrollbar {
+    display: none;
+}
+

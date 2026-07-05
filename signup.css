@@ -1,0 +1,71 @@
+body {
+    /* Deep Professional Gradient */
+    background-color:whitesmoke;
+
+    /* Ensures the gradient covers the full screen */
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+.signup-card {
+    background: white;
+    padding: 15px 40px 20px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    width: 100%;
+    max-width: 450px;
+}
+.form-control {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 15px;
+}
+.btn-signin {
+    background-color: #8a0000;
+    color: white;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.btn-signin:hover {
+    background-color: #b30000;
+    color: black;
+    transform: translateY(-2px);
+}
+
+/* 1. Remove the margin from the input inside a group so it doesn't push the button */
+.input-group .form-control {
+    margin-bottom: 0;
+}
+
+/* 2. Ensure the input group itself handles the spacing from the next label */
+.input-group {
+    margin-bottom: 15px;
+}
+
+/* 3. Style the eye button to match the input height and borders */
+.input-group .btn {
+    border: 1px solid #e0e0e0;
+    border-left: none; /* Merges it with the input box */
+    background: white;
+    color: #888;
+    padding: 0 15px; /* Adjust side padding for a cleaner look */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+}
+
+/* Optional: Subtle hover for the eye icon */
+.input-group .btn:hover {
+    background-color: #fcfcfc;
+    color: #111;
+}

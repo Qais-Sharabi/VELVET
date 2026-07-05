@@ -1,0 +1,158 @@
+/* --- Global Cart Aesthetic --- */
+.tracking-widest {
+    letter-spacing: 0.2rem;
+}
+
+/* Signature Font for the Founder's Note */
+.signature-font {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
+    color: #333;
+    display: inline-block;
+    text-transform: none !important;
+}
+
+/* --- Cart Item Layout --- */
+.cart-item {
+    transition: all 0.3s ease;
+}
+
+.product-img-bg {
+    flex-shrink: 0;
+    overflow: hidden;
+    background-color: #f7f7f7;
+    border: 1px solid #eee;
+}
+
+/* Quantity Control Box */
+.qty-control {
+    background: #fff;
+    border: 1px solid #ddd !important;
+    border-radius: 4px;
+    display: inline-flex;
+    overflow: hidden;
+}
+
+.qty-control button {
+    background: transparent;
+    transition: background 0.2s;
+}
+
+.qty-control button:hover {
+    background-color: #f0f0f0;
+}
+
+.qty-control input {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Remove Button Styling */
+.btn-remove {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888;
+    border: 1px solid #eee;
+    padding: 8px 15px;
+    border-radius: 0; /* Keeps it sharp and minimalist */
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.btn-remove:hover {
+    color: #000;
+    border-color: #000;
+    background-color: #fafafa;
+}
+
+.btn-remove i {
+    font-size: 0.8rem;
+}
+
+/* --- Order Summary Sidebar --- */
+.summary-box {
+    border-radius: 8px;
+    background-color: #fcfcfc !important;
+    border: 1px solid #f0f0f0 !important;
+}
+
+.btn-checkout {
+    letter-spacing: 1px;
+    transition: transform 0.2s;
+}
+
+.btn-checkout:active {
+    transform: scale(0.98);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 991px) {
+    .summary-box {
+        margin-top: 2rem;
+        position: static !important; /* Removes sticky behavior on mobile */
+    }
+
+    .product-img-bg {
+        width: 100px !important;
+        height: 130px !important;
+    }
+}
+
+/* Wishlist Modal Customization */
+#wishlistModal .modal-content {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+#wishlistModal .tracking-widest {
+    letter-spacing: 3px;
+}
+
+#wishlistModal #view_btn {
+    letter-spacing: 1px;
+    transition: 0.3s;
+    border: solid 1px #404040;
+    background-color: #ffe6f1;
+    color: black;
+}
+
+#wishlistModal #view_btn:hover {
+    background-color: #333;
+    color: white;
+    border: solid 2px #333;
+}
+
+#wishlistModal .btn-outline-danger {
+    padding: 30px; /* Gives the larger icon more room to breathe */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+}
+
+#wishlistModal .btn-outline-danger:hover {
+    background: transparent;
+    color: #b30000;
+    transform: scale(1.1);
+}
+
+/* Scrollbar for many items */
+#wishlistModal .modal-body {
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+/* Target the trash icon specifically in the wishlist */
+#wishlistModal .fa-trash-can {
+    font-size: 1.5rem; /* Adjust this value (1.5rem, 20px, etc.) */
+    transition: transform 0.2s ease;
+    color: #b30000;
+}
+
+/* Optional: Make it pop slightly when hovered */
+#wishlistModal .btn-outline-danger:hover .fa-trash-can {
+    transform: scale(1.2);
+    color:#cc0000 ;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+

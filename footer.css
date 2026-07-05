@@ -1,0 +1,19 @@
+/*Footer*/
+footer i {
+    margin-right: 10px;
+    /* color: white; */
+}
+footer {
+    background-color: #331a00;
+}
+
+/*Icons */
+.fa-facebook {
+    color:#004080;
+}
+.fa-whatsapp{
+    color:#00cc66;
+}
+.fa-instagram{
+    color:#ff99b3;
+}

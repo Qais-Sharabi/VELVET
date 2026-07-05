@@ -1,0 +1,56 @@
+#contactModal .modal-content {
+    background-color:#e6e6ff;
+    border: none;
+    border-radius: 0;
+}
+
+#contactModal .form-control {
+    padding: 15px;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+#contactModal .form-control:focus {
+    box-shadow: none;
+    background-color: #f0f0f0;
+}
+
+#contactModal .tracking-widest {
+    letter-spacing: 4px;
+}
+
+#contactModal .btn-dark:hover {
+    background-color: #333;
+    letter-spacing: 5px;
+    transition: 0.4s;
+}
+
+#contactModal .special-word {
+    color: #b30000;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.7rem;
+    font-weight: 800;
+}
+
+/* Success Message Animation */
+.success-check {
+    color: #28a745;
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 1rem;
+    animation: scaleUp 0.5s ease-out;
+}
+
+@keyframes scaleUp {
+    from { transform: scale(0); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.fade-in-text {
+    animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
